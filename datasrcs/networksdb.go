@@ -13,12 +13,12 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/OWASP/Amass/v3/config"
-	amassnet "github.com/OWASP/Amass/v3/net"
-	"github.com/OWASP/Amass/v3/net/dns"
-	"github.com/OWASP/Amass/v3/net/http"
-	"github.com/OWASP/Amass/v3/requests"
-	"github.com/OWASP/Amass/v3/systems"
+	"github.com/aokimio/Amass/v3/config"
+	amassnet "github.com/aokimio/Amass/v3/net"
+	"github.com/aokimio/Amass/v3/net/dns"
+	"github.com/aokimio/Amass/v3/net/http"
+	"github.com/aokimio/Amass/v3/requests"
+	"github.com/aokimio/Amass/v3/systems"
 	"github.com/caffix/service"
 	"github.com/caffix/stringset"
 )

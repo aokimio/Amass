@@ -14,8 +14,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/OWASP/Amass/v3/config"
-	"github.com/OWASP/Amass/v3/viz"
+	"github.com/aokimio/Amass/v3/config"
+	"github.com/aokimio/Amass/v3/viz"
 	"github.com/caffix/stringset"
 	"github.com/fatih/color"
 )

@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"strings"
 
-	amassnet "github.com/OWASP/Amass/v3/net"
-	"github.com/OWASP/Amass/v3/net/dns"
+	amassnet "github.com/aokimio/Amass/v3/net"
+	"github.com/aokimio/Amass/v3/net/dns"
 	"github.com/caffix/stringset"
 	"github.com/go-ini/ini"
 )

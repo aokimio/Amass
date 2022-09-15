@@ -8,8 +8,8 @@ import (
 	"net"
 	"strings"
 
-	"github.com/OWASP/Amass/v3/net/http"
-	"github.com/OWASP/Amass/v3/requests"
+	"github.com/aokimio/Amass/v3/net/http"
+	"github.com/aokimio/Amass/v3/requests"
 	"github.com/caffix/pipeline"
 	"github.com/caffix/queue"
 	"golang.org/x/net/publicsuffix"

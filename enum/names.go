@@ -8,7 +8,7 @@ import (
 	"context"
 	"strings"
 
-	"github.com/OWASP/Amass/v3/requests"
+	"github.com/aokimio/Amass/v3/requests"
 	"github.com/caffix/pipeline"
 	"github.com/caffix/stringset"
 )

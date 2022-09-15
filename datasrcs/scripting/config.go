@@ -5,7 +5,7 @@
 package scripting
 
 import (
-	"github.com/OWASP/Amass/v3/config"
+	"github.com/aokimio/Amass/v3/config"
 	"github.com/caffix/service"
 	lua "github.com/yuin/gopher-lua"
 )

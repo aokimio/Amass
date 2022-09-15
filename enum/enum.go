@@ -7,10 +7,10 @@ package enum
 import (
 	"context"
 
-	"github.com/OWASP/Amass/v3/config"
-	"github.com/OWASP/Amass/v3/datasrcs"
-	"github.com/OWASP/Amass/v3/requests"
-	"github.com/OWASP/Amass/v3/systems"
+	"github.com/aokimio/Amass/v3/config"
+	"github.com/aokimio/Amass/v3/datasrcs"
+	"github.com/aokimio/Amass/v3/requests"
+	"github.com/aokimio/Amass/v3/systems"
 	"github.com/caffix/netmap"
 	"github.com/caffix/pipeline"
 	"github.com/caffix/queue"

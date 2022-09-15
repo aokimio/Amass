@@ -10,8 +10,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/OWASP/Amass/v3/enum"
-	"github.com/OWASP/Amass/v3/requests"
+	"github.com/aokimio/Amass/v3/enum"
+	"github.com/aokimio/Amass/v3/requests"
 	"github.com/caffix/netmap"
 	"github.com/caffix/service"
 	"github.com/caffix/stringset"

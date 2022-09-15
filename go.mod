@@ -1,4 +1,4 @@
-module github.com/OWASP/Amass/v3
+module github.com/aokimio/Amass/v3
 
 go 1.16
 

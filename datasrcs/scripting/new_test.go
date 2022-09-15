@@ -7,7 +7,7 @@ package scripting
 import (
 	"testing"
 
-	"github.com/OWASP/Amass/v3/requests"
+	"github.com/aokimio/Amass/v3/requests"
 	"github.com/caffix/stringset"
 )
 

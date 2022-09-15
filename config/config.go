@@ -22,7 +22,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/OWASP/Amass/v3/resources"
+	"github.com/aokimio/Amass/v3/resources"
 	"github.com/caffix/stringset"
 	"github.com/go-ini/ini"
 	"github.com/google/uuid"

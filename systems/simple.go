@@ -7,8 +7,8 @@ package systems
 import (
 	"runtime"
 
-	"github.com/OWASP/Amass/v3/config"
-	"github.com/OWASP/Amass/v3/requests"
+	"github.com/aokimio/Amass/v3/config"
+	"github.com/aokimio/Amass/v3/requests"
 	"github.com/caffix/netmap"
 	"github.com/caffix/resolve"
 	"github.com/caffix/service"

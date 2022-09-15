@@ -9,9 +9,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/OWASP/Amass/v3/config"
-	"github.com/OWASP/Amass/v3/requests"
-	"github.com/OWASP/Amass/v3/systems"
+	"github.com/aokimio/Amass/v3/config"
+	"github.com/aokimio/Amass/v3/requests"
+	"github.com/aokimio/Amass/v3/systems"
 	"github.com/caffix/service"
 	"github.com/fofapro/fofa-go/fofa"
 )

@@ -8,10 +8,10 @@ import (
 	"context"
 	"sort"
 
-	"github.com/OWASP/Amass/v3/config"
-	"github.com/OWASP/Amass/v3/datasrcs/scripting"
-	"github.com/OWASP/Amass/v3/requests"
-	"github.com/OWASP/Amass/v3/systems"
+	"github.com/aokimio/Amass/v3/config"
+	"github.com/aokimio/Amass/v3/datasrcs/scripting"
+	"github.com/aokimio/Amass/v3/requests"
+	"github.com/aokimio/Amass/v3/systems"
 	"github.com/caffix/service"
 	"github.com/caffix/stringset"
 )

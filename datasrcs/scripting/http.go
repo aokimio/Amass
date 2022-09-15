@@ -9,7 +9,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/OWASP/Amass/v3/net/http"
+	"github.com/aokimio/Amass/v3/net/http"
 	lua "github.com/yuin/gopher-lua"
 )
 

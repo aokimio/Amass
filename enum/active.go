@@ -10,9 +10,9 @@ import (
 	"strconv"
 	"strings"
 
-	amassdns "github.com/OWASP/Amass/v3/net/dns"
-	"github.com/OWASP/Amass/v3/net/http"
-	"github.com/OWASP/Amass/v3/requests"
+	amassdns "github.com/aokimio/Amass/v3/net/dns"
+	"github.com/aokimio/Amass/v3/net/http"
+	"github.com/aokimio/Amass/v3/requests"
 	"github.com/caffix/pipeline"
 	"github.com/caffix/queue"
 	"github.com/caffix/resolve"

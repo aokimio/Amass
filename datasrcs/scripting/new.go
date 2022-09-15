@@ -9,10 +9,10 @@ import (
 	"net"
 	"time"
 
-	amassnet "github.com/OWASP/Amass/v3/net"
-	"github.com/OWASP/Amass/v3/net/http"
-	"github.com/OWASP/Amass/v3/requests"
-	"github.com/OWASP/Amass/v3/systems"
+	amassnet "github.com/aokimio/Amass/v3/net"
+	"github.com/aokimio/Amass/v3/net/http"
+	"github.com/aokimio/Amass/v3/requests"
+	"github.com/aokimio/Amass/v3/systems"
 	bf "github.com/tylertreat/BoomFilters"
 	lua "github.com/yuin/gopher-lua"
 )

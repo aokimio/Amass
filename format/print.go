@@ -11,8 +11,8 @@ import (
 	"strconv"
 	"strings"
 
-	amassnet "github.com/OWASP/Amass/v3/net"
-	"github.com/OWASP/Amass/v3/requests"
+	amassnet "github.com/aokimio/Amass/v3/net"
+	"github.com/aokimio/Amass/v3/requests"
 	"github.com/fatih/color"
 )
 

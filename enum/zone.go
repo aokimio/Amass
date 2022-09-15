@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	amassnet "github.com/OWASP/Amass/v3/net"
-	"github.com/OWASP/Amass/v3/requests"
+	amassnet "github.com/aokimio/Amass/v3/net"
+	"github.com/aokimio/Amass/v3/requests"
 	"github.com/caffix/resolve"
 	"github.com/miekg/dns"
 )

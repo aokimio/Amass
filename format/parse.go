@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	amassnet "github.com/OWASP/Amass/v3/net"
+	amassnet "github.com/aokimio/Amass/v3/net"
 )
 
 // ParseStrings implements the flag.Value interface.

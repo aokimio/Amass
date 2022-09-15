@@ -13,9 +13,9 @@ import (
 	"strings"
 	"time"
 
-	amassnet "github.com/OWASP/Amass/v3/net"
-	amassdns "github.com/OWASP/Amass/v3/net/dns"
-	"github.com/OWASP/Amass/v3/requests"
+	amassnet "github.com/aokimio/Amass/v3/net"
+	amassdns "github.com/aokimio/Amass/v3/net/dns"
+	"github.com/aokimio/Amass/v3/requests"
 	"github.com/caffix/pipeline"
 	"github.com/caffix/queue"
 	"github.com/caffix/resolve"

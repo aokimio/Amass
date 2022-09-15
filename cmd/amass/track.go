@@ -14,8 +14,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/OWASP/Amass/v3/config"
-	"github.com/OWASP/Amass/v3/requests"
+	"github.com/aokimio/Amass/v3/config"
+	"github.com/aokimio/Amass/v3/requests"
 	"github.com/caffix/netmap"
 	"github.com/caffix/stringset"
 	"github.com/fatih/color"
