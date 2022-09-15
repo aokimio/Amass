@@ -104,7 +104,7 @@ func defineIntelFilepathFlags(intelFlags *flag.FlagSet, args *intelArgs) {
 	intelFlags.StringVar(&args.Filepaths.TermOut, "o", "", "Path to the text file containing terminal stdout/stderr")
 }
 
-func runIntelCommand(clArgs []string) {
+func RunIntelCommand(clArgs []string) {
 	args := intelArgs{
 		Domains:   stringset.New(),
 		Excluded:  stringset.New(),
@@ -124,7 +124,7 @@ func runIntelCommand(clArgs []string) {
 	defineIntelFilepathFlags(intelCommand, &args)
 
 	if len(clArgs) < 1 {
-		commandUsage(intelUsageMsg, intelCommand, intelBuf)
+		CommandUsage(intelUsageMsg, intelCommand, intelBuf)
 		return
 	}
 	if err := intelCommand.Parse(clArgs); err != nil {
@@ -132,12 +132,12 @@ func runIntelCommand(clArgs []string) {
 		os.Exit(1)
 	}
 	if help1 || help2 {
-		commandUsage(intelUsageMsg, intelCommand, intelBuf)
+		CommandUsage(intelUsageMsg, intelCommand, intelBuf)
 		return
 	}
 	if (args.Excluded.Len() > 0 || args.Filepaths.ExcludedSrcs != "") &&
 		(args.Included.Len() > 0 || args.Filepaths.IncludedSrcs != "") {
-		commandUsage(intelUsageMsg, intelCommand, intelBuf)
+		CommandUsage(intelUsageMsg, intelCommand, intelBuf)
 		os.Exit(1)
 	}
 
@@ -169,7 +169,7 @@ func runIntelCommand(clArgs []string) {
 	// Some input validation
 	if !args.Options.ReverseWhois && args.OrganizationName == "" && !args.Options.ListSources &&
 		len(args.Addresses) == 0 && len(args.CIDRs) == 0 && len(args.ASNs) == 0 {
-		commandUsage(intelUsageMsg, intelCommand, intelBuf)
+		CommandUsage(intelUsageMsg, intelCommand, intelBuf)
 		os.Exit(1)
 	}
 	if !cfg.Active && len(args.Ports) > 0 {

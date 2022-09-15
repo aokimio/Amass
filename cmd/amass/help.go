@@ -5,28 +5,28 @@ import (
 	"flag"
 )
 
-func runHelpCommand(clArgs []string) {
+func RunHelpCommand(clArgs []string) {
 	help := []string{"-help"}
 	helpBuf := new(bytes.Buffer)
 	helpCommand := flag.NewFlagSet("help", flag.ContinueOnError)
 	helpCommand.SetOutput(helpBuf)
 	if len(clArgs) < 1 {
-		commandUsage(mainUsageMsg, helpCommand, helpBuf)
+		CommandUsage(mainUsageMsg, helpCommand, helpBuf)
 		return
 	}
 	switch clArgs[0] {
 	case "db":
-		runDBCommand(help)
+		RunDBCommand(help)
 	case "enum":
-		runEnumCommand(help)
+		RunEnumCommand(help)
 	case "intel":
-		runIntelCommand(help)
+		RunIntelCommand(help)
 	case "track":
-		runTrackCommand(help)
+		RunTrackCommand(help)
 	case "viz":
-		runVizCommand(help)
+		RunVizCommand(help)
 	default:
-		commandUsage(mainUsageMsg, helpCommand, helpBuf)
+		CommandUsage(mainUsageMsg, helpCommand, helpBuf)
 		return
 	}
 }

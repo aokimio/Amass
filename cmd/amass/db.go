@@ -55,7 +55,7 @@ type dbArgs struct {
 	}
 }
 
-func runDBCommand(clArgs []string) {
+func RunDBCommand(clArgs []string) {
 	var args dbArgs
 	var help1, help2 bool
 	dbCommand := flag.NewFlagSet("db", flag.ContinueOnError)
@@ -87,7 +87,7 @@ func runDBCommand(clArgs []string) {
 	dbCommand.StringVar(&args.Filepaths.TermOut, "o", "", "Path to the text file containing terminal stdout/stderr")
 
 	if len(clArgs) < 1 {
-		commandUsage(dbUsageMsg, dbCommand, dbBuf)
+		CommandUsage(dbUsageMsg, dbCommand, dbBuf)
 		return
 	}
 	if err := dbCommand.Parse(clArgs); err != nil {
@@ -95,7 +95,7 @@ func runDBCommand(clArgs []string) {
 		os.Exit(1)
 	}
 	if help1 || help2 {
-		commandUsage(dbUsageMsg, dbCommand, dbBuf)
+		CommandUsage(dbUsageMsg, dbCommand, dbBuf)
 		return
 	}
 	if args.Options.NoColor {
@@ -162,7 +162,7 @@ func runDBCommand(clArgs []string) {
 		args.Options.ASNTableSummary = true
 	}
 	if !args.Options.DiscoveredNames && !args.Options.ASNTableSummary {
-		commandUsage(dbUsageMsg, dbCommand, dbBuf)
+		CommandUsage(dbUsageMsg, dbCommand, dbBuf)
 		return
 	}
 	// Put the events in chronological order

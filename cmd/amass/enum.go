@@ -162,7 +162,7 @@ func defineEnumFilepathFlags(enumFlags *flag.FlagSet, args *enumArgs) {
 	enumFlags.StringVar(&args.Filepaths.TermOut, "o", "", "Path to the text file containing terminal stdout/stderr")
 }
 
-func runEnumCommand(clArgs []string) {
+func RunEnumCommand(clArgs []string) {
 	// Seed the default pseudo-random number generator
 	rand.Seed(time.Now().UTC().UnixNano())
 	// Extract the correct config from the user provided arguments and/or configuration file
@@ -318,7 +318,7 @@ func argsAndConfig(clArgs []string) (*config.Config, *enumArgs) {
 	defineEnumFilepathFlags(enumCommand, &args)
 
 	if len(clArgs) < 1 {
-		commandUsage(enumUsageMsg, enumCommand, enumBuf)
+		CommandUsage(enumUsageMsg, enumCommand, enumBuf)
 		return nil, &args
 	}
 	if err := enumCommand.Parse(clArgs); err != nil {
@@ -326,7 +326,7 @@ func argsAndConfig(clArgs []string) (*config.Config, *enumArgs) {
 		os.Exit(1)
 	}
 	if help1 || help2 {
-		commandUsage(enumUsageMsg, enumCommand, enumBuf)
+		CommandUsage(enumUsageMsg, enumCommand, enumBuf)
 		return nil, &args
 	}
 
@@ -357,7 +357,7 @@ func argsAndConfig(clArgs []string) (*config.Config, *enumArgs) {
 	if (args.Excluded.Len() > 0 || args.Filepaths.ExcludedSrcs != "") &&
 		(args.Included.Len() > 0 || args.Filepaths.IncludedSrcs != "") {
 		r.Fprintln(color.Error, "Cannot provide both include and exclude arguments")
-		commandUsage(enumUsageMsg, enumCommand, enumBuf)
+		CommandUsage(enumUsageMsg, enumCommand, enumBuf)
 		os.Exit(1)
 	}
 	if err := processEnumInputFiles(&args); err != nil {

@@ -46,7 +46,7 @@ type vizArgs struct {
 	}
 }
 
-func runVizCommand(clArgs []string) {
+func RunVizCommand(clArgs []string) {
 	var args vizArgs
 	var help1, help2 bool
 	vizCommand := flag.NewFlagSet("viz", flag.ContinueOnError)
@@ -76,7 +76,7 @@ func runVizCommand(clArgs []string) {
 	vizCommand.BoolVar(&args.Options.Silent, "silent", false, "Disable all output during execution")
 
 	if len(clArgs) < 1 {
-		commandUsage(vizUsageMsg, vizCommand, vizBuf)
+		CommandUsage(vizUsageMsg, vizCommand, vizBuf)
 		return
 	}
 	if err := vizCommand.Parse(clArgs); err != nil {
@@ -84,7 +84,7 @@ func runVizCommand(clArgs []string) {
 		os.Exit(1)
 	}
 	if help1 || help2 {
-		commandUsage(vizUsageMsg, vizCommand, vizBuf)
+		CommandUsage(vizUsageMsg, vizCommand, vizBuf)
 		return
 	}
 	if args.Options.NoColor {

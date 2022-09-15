@@ -67,7 +67,7 @@ var (
 	blue   = color.New(color.FgHiBlue).SprintFunc()
 )
 
-func commandUsage(msg string, cmdFlagSet *flag.FlagSet, errBuf *bytes.Buffer) {
+func CommandUsage(msg string, cmdFlagSet *flag.FlagSet, errBuf *bytes.Buffer) {
 	format.PrintBanner()
 	g.Fprintf(color.Error, "Usage: %s %s\n\n", path.Base(os.Args[0]), msg)
 	cmdFlagSet.PrintDefaults()
@@ -100,7 +100,7 @@ func main() {
 	mainFlagSet.BoolVar(&version, "version", false, "Print the version number of this Amass binary")
 
 	if len(os.Args) < 2 {
-		commandUsage(mainUsageMsg, mainFlagSet, defaultBuf)
+		CommandUsage(mainUsageMsg, mainFlagSet, defaultBuf)
 		return
 	}
 	if err := mainFlagSet.Parse(os.Args[1:]); err != nil {
@@ -108,7 +108,7 @@ func main() {
 		os.Exit(1)
 	}
 	if help1 || help2 {
-		commandUsage(mainUsageMsg, mainFlagSet, defaultBuf)
+		CommandUsage(mainUsageMsg, mainFlagSet, defaultBuf)
 		return
 	}
 	if version {
@@ -118,19 +118,19 @@ func main() {
 
 	switch os.Args[1] {
 	case "db":
-		runDBCommand(os.Args[2:])
+		RunDBCommand(os.Args[2:])
 	case "enum":
-		runEnumCommand(os.Args[2:])
+		RunEnumCommand(os.Args[2:])
 	case "intel":
-		runIntelCommand(os.Args[2:])
+		RunIntelCommand(os.Args[2:])
 	case "track":
-		runTrackCommand(os.Args[2:])
+		RunTrackCommand(os.Args[2:])
 	case "viz":
-		runVizCommand(os.Args[2:])
+		RunVizCommand(os.Args[2:])
 	case "help":
-		runHelpCommand(os.Args[2:])
+		RunHelpCommand(os.Args[2:])
 	default:
-		commandUsage(mainUsageMsg, mainFlagSet, defaultBuf)
+		CommandUsage(mainUsageMsg, mainFlagSet, defaultBuf)
 		os.Exit(1)
 	}
 }

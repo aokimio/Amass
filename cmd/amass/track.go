@@ -42,7 +42,7 @@ type trackArgs struct {
 	}
 }
 
-func runTrackCommand(clArgs []string) {
+func RunTrackCommand(clArgs []string) {
 	var args trackArgs
 	var help1, help2 bool
 	trackCommand := flag.NewFlagSet("track", flag.ContinueOnError)
@@ -66,7 +66,7 @@ func runTrackCommand(clArgs []string) {
 	trackCommand.StringVar(&args.Filepaths.Domains, "df", "", "Path to a file providing root domain names")
 
 	if len(clArgs) < 1 {
-		commandUsage(trackUsageMsg, trackCommand, trackBuf)
+		CommandUsage(trackUsageMsg, trackCommand, trackBuf)
 		return
 	}
 	if err := trackCommand.Parse(clArgs); err != nil {
@@ -74,7 +74,7 @@ func runTrackCommand(clArgs []string) {
 		os.Exit(1)
 	}
 	if help1 || help2 {
-		commandUsage(trackUsageMsg, trackCommand, trackBuf)
+		CommandUsage(trackUsageMsg, trackCommand, trackBuf)
 		return
 	}
 	if args.Options.NoColor {
